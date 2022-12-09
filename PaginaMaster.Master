@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaster.master.cs" Inherits="Ecommerce.PaginaMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Bootstrap
+                    </a>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer class="py-3 my-4">
+                <hr />
+                <p class="text-center text-muted">© 2022 Company, Inc</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
