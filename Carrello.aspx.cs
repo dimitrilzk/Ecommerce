@@ -14,7 +14,7 @@ namespace Ecommerce
             decimal totale = 0;
            foreach(Prodotto x in Prodotto.ListaCarrello)
             {
-                totale += x.prezzo;
+                totale += Convert.ToDecimal(x.prezzo);
                 Label2.Text += $"{x.nomeProdotto} al prezzo di: {x.prezzo.ToString("c2")} ";
                 Label3.Text = totale.ToString("c2");
             }
