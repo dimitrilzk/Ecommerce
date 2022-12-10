@@ -19,8 +19,20 @@ namespace Ecommerce
                     Image1.ImageUrl = p.img.ToString();
                     Label1.Text = p.nomeProdotto;
                     Label2.Text = p.descrizione;
+                    Label3.Text = p.prezzo.ToString();
                 }
             }
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Prodotto acquistato = new Prodotto();
+            acquistato.prezzo = Convert.ToInt32(Label3.Text); ;
+            acquistato.nomeProdotto = Label1.Text; ;
+            acquistato.img = Image1.ImageUrl.ToString();
+            Prodotto.ListaCarrello.Add(acquistato);
+            messaggioAcquisto.Text = "Articolo aggiunto al tuo carrello!";
 
         }
     }

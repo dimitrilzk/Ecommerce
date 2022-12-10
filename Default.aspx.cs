@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,10 +13,14 @@ namespace Ecommerce
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Repeater1.DataSource = Prodotto.ListaProdotti();
-            Repeater1.DataBind();
+            if(!IsPostBack)
+            {
+                Repeater1.DataSource = Prodotto.ListaProdotti();
+                Repeater1.DataBind();
+            }
         }
     }
+
     public class Prodotto
     {
         public int id { get; set; }
@@ -23,7 +28,11 @@ namespace Ecommerce
         public decimal prezzo { get; set; }
         public string descrizione { get; set; }
         public string img { get; set; }
-        public static List<Prodotto> ListaProdotti()
+
+        public static List<Prodotto> ListaCarrello = new List<Prodotto>();
+
+
+    public static List<Prodotto> ListaProdotti()
         {
             Prodotto o1 = new Prodotto();
             o1.id = 1;

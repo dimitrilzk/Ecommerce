@@ -6,14 +6,13 @@
         <div class="row">
             <asp:Repeater ID="Repeater1" runat="server" ItemType="Ecommerce.Prodotto">
                 <ItemTemplate>
-                    <div class="col-md-4">
+                    <div class="col-md-4 text-center">
                 <div class="card" style="width: 15rem;">
-                    <asp:Image ID="Image1" runat="server" CssClass="card" style="width: 15rem;" ImageUrl="<%# Item.img %>"   />
+                    <asp:Image ID="Image1" runat="server" CssClass="card img-fluid" ImageUrl="<%# Item.img %>"   />
                     <div class="card-body">
                         <asp:Label ID="Label1" runat="server" Text="" CssClass="card-title; text-center;"><%# Item.nomeProdotto %></asp:Label><br />
-                        <asp:Label ID="Label2" runat="server" Text="" CssClass="card-text"><%# Item.descrizione %></asp:Label><br />
-                        <asp:Label ID="Label3" runat="server" Text="" CssClass="text-center;"><%#  Item.prezzo.ToString("c2") %></asp:Label><br />
-                        <a href="Dettagli.aspx?idProdotto=<%# Item.id %>" class="btn btn-dark container-fluid">Dettagli</a>
+                        <asp:Label ID="Label3" runat="server" Text="" CssClass="text-center text-info"><%#  Item.prezzo.ToString("c2") %></asp:Label><br />
+                        <a href="Dettagli.aspx?idProdotto=<%# Item.id %>" class="btn btn-dark container-fluid mt-3">Dettagli</a>
                     </div>
                 </div>
             </div>

@@ -11,20 +11,20 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <nav class="navbar bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Bootstrap
+    <form id="form1" runat="server" >
+        <div class="bg-light">
+            <nav class="navbar bg-dark">
+                <div class="container-fluid d-flex justify-content-space-between ">
+                    <a class="navbar-brand text-white" href="Default.aspx">Daniel Wellington
                     </a>
+                    <a href="Carrello.aspx" class="btn btn-warning text-black">Carrello</a>
                 </div>
             </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <footer class="py-3 my-4">
-                <hr />
-                <p class="text-center text-muted">© 2022 Company, Inc</p>
-            </footer>
+            <div class="bg-dark container-fluid text-white py-2">
+                <p class="text-center text-black-muted">© 2022 Daniel Wellington, Inc</p>
+            </div>
         </div>
     </form>
 </body>
