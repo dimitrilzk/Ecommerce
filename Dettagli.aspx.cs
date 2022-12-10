@@ -34,19 +34,12 @@ namespace Ecommerce
                 {
                     Prodotto acquistato = new Prodotto();
                     acquistato.prezzo = p.prezzo;
-                    acquistato.nomeProdotto = Label1.Text;
-                    acquistato.img = Image1.ImageUrl.ToString();
+                    acquistato.nomeProdotto = p.nomeProdotto;
+                    acquistato.img = p.img.ToString();
                     Prodotto.ListaCarrello.Add(acquistato);
                     messaggioAcquisto.Text = "Articolo aggiunto al tuo carrello!";
                 }
             }
-            //Prodotto acquistato = new Prodotto();
-            //acquistato.prezzo = Convert.ToDecimal(Label3.Text);
-            //acquistato.nomeProdotto = Label1.Text;
-            //acquistato.img = Image1.ImageUrl.ToString();
-            //Prodotto.ListaCarrello.Add(acquistato);
-            //messaggioAcquisto.Text = "Articolo aggiunto al tuo carrello!";
-
         }
     }
 }
