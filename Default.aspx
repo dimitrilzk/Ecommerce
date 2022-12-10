@@ -13,7 +13,7 @@
                         <asp:Label ID="Label1" runat="server" Text="" CssClass="card-title; text-center;"><%# Item.nomeProdotto %></asp:Label><br />
                         <asp:Label ID="Label2" runat="server" Text="" CssClass="card-text"><%# Item.descrizione %></asp:Label><br />
                         <asp:Label ID="Label3" runat="server" Text="" CssClass="text-center;"><%#  Item.prezzo.ToString("c2") %></asp:Label><br />
-                        <a href="#" class="btn btn-primary container-fluid">Go somewhere</a>
+                        <a href="Dettagli.aspx?idProdotto=<%# Item.id %>" class="btn btn-dark container-fluid">Dettagli</a>
                     </div>
                 </div>
             </div>

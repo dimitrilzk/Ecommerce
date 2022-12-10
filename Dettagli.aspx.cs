@@ -11,6 +11,16 @@ namespace Ecommerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string idPassato = Request.QueryString["idProdotto"];
+            foreach (Prodotto p in Prodotto.ListaProdotti())
+            {
+                if(p.id == Convert.ToInt32(idPassato))
+                {
+                    Image1.ImageUrl = p.img.ToString();
+                    Label1.Text = p.nomeProdotto;
+                    Label2.Text = p.descrizione;
+                }
+            }
 
         }
     }
