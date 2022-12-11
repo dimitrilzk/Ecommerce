@@ -10,7 +10,7 @@
                         <div class="card" style="width: 20rem;">
                             <asp:Image ID="Image1" runat="server" CssClass="card img-fluid" ImageUrl="<%# Item.img %>" />
                             <div class="card-body bg-success">
-                                <asp:Label ID="Label1" runat="server" Text="" CssClass="card-title fw-bold text-center"><%# Item.nomeProdotto %></asp:Label><br />
+                                <asp:Label ID="Label1" runat="server" Text="" CssClass="card-title fw-bold text-center"><%# Item.nomeProdotto%></asp:Label><br />
                                 <asp:Label ID="Label3" runat="server" Text="" CssClass="text-center text-warning"><%#  Item.prezzo.ToString("c2") %></asp:Label><br />
                                 <a href="Dettagli.aspx?idProdotto=<%# Item.id %>" class="btn btn-dark container-fluid mt-3">Dettagli</a>
                             </div>
